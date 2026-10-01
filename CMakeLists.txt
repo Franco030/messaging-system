@@ -29,7 +29,7 @@ add_library(network_config INTERFACE)
 
 if(WIN32)
     target_compile_definitions(network_config INTERFACE _WIN32_WINNT=0x0A00)
-    target_link_libraries(network_config INTERFACE ws2_32 mswsoc)
+    target_link_libraries(network_config INTERFACE ws2_32 mswsock)
 endif()
 
 target_compile_options(network_config INTERFACE -Wall -Wextra -Wpedantic)
